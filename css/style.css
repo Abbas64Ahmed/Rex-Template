@@ -1479,6 +1479,11 @@ ul {
     background-color: #191919;
     color: white;
 }
+@media (max-width:767px) {
+.footer {
+    text-align: center;
+}
+}
 .footer .container {
     padding-top: var(--main-padding-top);
     padding-bottom: var(--main-padding-bottom);
@@ -1494,6 +1499,11 @@ ul {
     display: flex;
     gap: 15px;
 }
+@media (max-width:767px) {
+.footer .container .media ul {
+    justify-content: center;
+}
+}
 .footer .container .media ul li a {
     background-color: #313131;
     padding: 20px;
@@ -1502,6 +1512,16 @@ ul {
     justify-content: center;
     align-items: center;
     font-size: 30px;
+    transition: var(--main-transition);
+}
+.footer .container .media ul li .facebook:hover {
+    background-color: #1877f2;
+}
+.footer .container .media ul li .twitter:hover {
+    background-color: #1da1f2;
+}
+.footer .container .media ul li .youtube:hover {
+    background-color: #ff0000;
 }
 .footer .container .media p {
     color: #b9b9b9;
@@ -1514,9 +1534,14 @@ ul {
     font-size: 20px;
     display: block;
     padding: 20px 10px;
+    transition: var(--main-transition);
 }
 .footer .container .links ul li:not(:last-child) a {
     border-bottom: 1px solid #313131;
+}
+.footer .container .links ul li a:hover {
+    padding-left: 20px;
+    color: white;
 }
 .footer .container .links ul li a::before {
     content: "\f101";
@@ -1530,37 +1555,35 @@ ul {
     flex-direction: column;
     justify-content: space-between;
 }
-.footer .container .contact > div {
+.footer .container .contact .box  {
     display: flex;
     align-items: center;
     gap: 20px;
     font-size: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
-.footer .container .contact  > div i {
+@media (max-width:767px) {
+.footer .container .contact .box {
+    flex-direction: column;
+}
+}
+.footer .container .contact .box i {
     color: var(--main-color);
 }
-.footer .container .contact div p {
+.footer .container .contact .box p {
     color: #b9b9b9;
+    flex: 1;
+}
+@media (max-width:767px) {
+.footer .container .contact .box {
+    flex-direction: column;
+}
 }
 
-.footer .container .pics {
-    display: grid;
-    grid-template-columns: repeat(3 ,minmax(30px,1fr));
-    gap: 10px;
-    align-content: start;
-}
-.footer .container .pics .image {
-    background-color: white;
-    padding: 2px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.footer .container .pics .image img {
-    width: 85px;
-    height: 85px;
-    max-width: 100%;
+.footer .container .pics img {
+    width: 78px;
+    border: 3px solid white;
+    margin: 2px;
 }
 .footer > p:last-child {
     text-align: center;
